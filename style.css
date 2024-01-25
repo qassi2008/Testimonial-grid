@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    Font-size: 14px;
+    font-weight: 600;
+    background-color: #edf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "main1 main1 main2 aside"
+    "main3 main4 main4 aside";
+    margin: 40px auto;
+    padding: 10px;
+    max-width: 1440px;
+}
+.testimonial{
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: rgba(17, 12, 46, 0.16) 0 48px 100px 0;
+    padding: 10px;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+.testimonial-name h3{
+    font-size: 15px;
+}
+.testimonial-name p{
+    opacity: 0.5; /*50%*/
+    font-size: 15px;
+}
+.testimonial-image{
+    border-radius: 50%;
+    border: #996ed9 2px solid;
+    margin-right: 8px;
+    z-index: 1;
+}
+.testimonial1{
+    grid-area: main1;
+    background-color: hsl(263, 55%, 52%);
+    color: #fff;
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 20px;
+
+}
+.testimonial2 {
+    grid-area: main2;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 8px;
+    color: #FFF;
+    overflow: hidden;
+    padding: 20px;
+}
+.testimonial3 {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+.testimonial4 {
+    grid-area: main4;
+    background-color: hsl(219, 29%, 14%);
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+.testimonial5 {
+    grid-area: aside;
+    background: hsl(0, 0%, 100%); /* White background */
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+}
+.test-text-large{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 10px;
+}
+.test-text{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    opacity: 0.7;
+    padding: 10px;
+}
+footer {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+    padding: 10px 0;
+}
+/* Existing CSS */
+
+/* Add media queries for tablet and mobile devices */
+@media screen and (max-width: 768px) {
+    /* Adjust grid layout for tablet */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main1 main1"
+            "main2 main2"
+            "main3 main3"
+            "main4 main4"
+            "aside aside";
+    }
+
+    /* Adjust testimonial image size */
+    .testimonial-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Adjust font sizes for tablet */
+    .testimonial-name h3,
+    .testimonial-name p,
+    .test-text-large,
+    .test-text {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust grid layout for mobile */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main1"
+            "main2"
+            "main3"
+            "main4"
+            "aside";
+    }
+    /* Further adjust testimonial image size for mobile */
+    .testimonial-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Adjust font sizes for mobile */
+    .testimonial-name h3,
+    .testimonial-name p,
+    .test-text-large,
+    .test-text {
+        font-size: 0.9rem;
+    }
+}
